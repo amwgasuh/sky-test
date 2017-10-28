@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			p {
+				margin: 0 auto;
+				width: 254px;
+				height: 144px;
+			}
+			span {
+				margin: -44px auto 0 auto;
+				position: relative;
+				width: 254px;
+				height: 44px;;
+				line-height: 44px;
+				background: red;
+				display: none;
+				text-align: center;
+				font-size: 20px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<p><img src="images/san.jpg"/>
+		
+		</p>
+		<span>图片名称</span>
+	</body>
+	<script type="text/javascript">
+			var images = document.getElementsByTagName("img")[0];
+			images.onmouseover = function() {
+				var sub_span = document.getElementsByTagName("span");
+				sub_span[0].style.display = "block";
+			}
+			images.onmouseout = function() {
+				var sub_span = document.getElementsByTagName("span");
+				sub_span[0].style.display = "none";
+			}
+		</script>
+</html>
