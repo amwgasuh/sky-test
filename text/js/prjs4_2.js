@@ -42,6 +42,7 @@
 
 /*************************************************/
 
+// 6.1练习
 //var msg = "",
 //	city = window.prompt("Whit is he name of your city?");
 //if ( (city === null) || (city ==="" ) ) {
@@ -66,11 +67,60 @@
 
 /*************************************************************/
 
-var student0 = "thomas",
-	student1 = "Roger",
-	student2 = "Amber",
-	student3 = "Jennifer";
-document.write("student0 + <br />");
-document.write("student1 + <br />");
-document.write("student2 + <br />");
-document.write("student3 + <br />");
+//var student0 = "thomas",
+//	student1 = "Roger",
+//	student2 = "Amber",
+//	student3 = "Jennifer";
+//document.write(student0 + "<br />");
+//document.write(student1 + "<br />");
+//document.write(student2 + "<br />");
+//document.write(student3 + "<br />");
+
+/*************************************************************/
+
+//	6.2练习
+//var msg = "",
+//	items = 0,
+//	city = window.prompt("Whit is he name of your city?");
+//if ( (city === null) || (city ==="" ) ) {
+//	msg = "No city enterd. Cannot determine delivery availabilite.";
+//}
+//else {
+//	switch (city) {
+//		case "Johnstown" :
+//			msg = "We can have items delivered to you in 3days.";
+//			items = 10;
+//			break;
+//		case "Donville" :
+//			msg = "We can have items delivered to you in 1 week";
+//			items = 5;
+//			break;
+//		case " Daineltown || Maryville " :
+//			msg = "We can have items delivered to you in 2 weeks";
+//			items = 2;
+//			break;
+//		default :
+//		msg = "Sorry!We do not deliver to your city yet.";
+//		items = 0;
+//	}
+//}
+//document.write(msg);
+//if (items > 0) {
+//	document.write("<p>We can deliver up to " + items + "item to your city.</p>");
+//}
+//	document.write("<p>Print this out, write your item numbers below, and mailit to us to order.</p>");
+//	for (var count = 1; count<=items; count++) {
+//		document.write(count + ".______<br>");
+//	}
+
+/*************************************************************/
+
+//7.1练习
+//var computer_parts = ["Monitors", "Motherboards", "Chips", "Hard Drives", "DVD-ROWS", "Cases", "Power Suplies"],
+//	i = 0;
+//for (var i = 0; i<computer_parts.length; i++) {
+//	console.log(computer_parts[i]);
+//}
+var fruits = ["oranges", "apples", "pears", "grapes"];
+var somefruits = fruits.slice(0,4);
+console.log(somefruits);
