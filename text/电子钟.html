@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css" media="screen">
+     	* {
+     		margin: 0;
+        	padding: 0;
+     	}
+     	h1,h2,h3 {
+     		text-align: center;
+     	}
+        #shizhong {
+            margin-left:auto;
+            margin-right:auto;
+            width:236px;
+            height: 264px;
+            overflow:hidden;
+            background: skyblue no-repeat;
+            margin-top:50px;
+        }
+        h1 {
+            color: #fff;
+            height: 72px;
+            line-height: 72px;
+            font-size:30px;
+        }
+        #riqi {
+            font-size:120px;
+            color: #000;
+            height: 140px;
+            line-height: 140px;
+        }
+        #shijian h3 {
+            line-height: 24px;
+            font-size: 20px;
+            color:#666;
+        }
+        #yue {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="shizhong">
+        <h1>星期<span id="xq">一</span></h1>
+        <h2 id="riqi">30</h2>
+        <h3>
+            <span id="nian">2008</span>
+            <span id="yue">Feb</span>
+            <span id="shijian">12:30</span>
+        </h3>
+    </div>
+</body>
+<script type="text/javascript">
+	function showLocalTime() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var Month = now.getMonth()+1;
+            var date = now.getDate();
+            var day = now.getDay();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+
+             document.getElementById("xq").innerHTML = day;
+             document.getElementById("riqi").innerHTML = date;
+             document.getElementById("nian").innerHTML = year;
+             document.getElementById("yue").innerHTML = Month;
+             document.getElementById("shijian").innerHTML = hour + ":" + minute + ":" + second;
+        }
+	showLocalTime();
+	var mySet = setInterval(function() {
+		showLocalTime();
+	},1000);
+</script>
+</html>

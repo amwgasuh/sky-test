@@ -13,19 +13,55 @@
 			<input type="radio" name="dino" id="dino_spino" value="Spinosaurus" />
 			<label for="dino_spino">One with losts of backbone</label>
 		</fieldset>-->
-		<nav id="sitelinks">
+		
+		<!--------------------------------------------------------->
+		
+		<!--<nav id="sitelinks">
 			<a href="page1.html">page1</a>
 			<a href="page2.html">page2</a>
 			<a href="page3.html">page3</a>
 		</nav>
 		<div>
 			Here is some content and check out <a href="someplace.come">my other site</a>!
+		</div>-->
+		
+		<!--------------------------------------------------------->
+		
+		<!--<div id="div1" title="all about me!">
+			This is what！
+		</div>-->
+
+		<!--------------------------------------------------------->
+		
+		<div id="div1" title="Gosh!">
+			Whatever I fell like I want to write...
 		</div>
 	</body>
 	<script type="text/javascript">
 //		var dino_radio = document.getElementsByName("dino");
-		var nav_element = document.getElementById("sitelinks");
-		var nav_links = nav_element.getElementsByTagName("a");
-		alert("There are " + nav_links.length + " links in the nav element.");
+//		var nav_element = document.getElementById("sitelinks");
+//		var nav_links = nav_element.getElementsByTagName("a");
+//		alert("There are " + nav_links.length + " links in the nav element.");
+
+/*************************************************************/
+
+//		var me_div = document.getElementById("div1");
+//		var inner_div= document.createElement("div");
+//		var inner_div_text = document.createTextNode("what happened!");
+//		inner_div.appendChild(inner_div_text);
+//		inner_div.title ="more";
+//		me_div.appendChild(inner_div); //增加子节点inner_div
+//		me_div.removeChild(inner_div); //删除子节点inner_div
+//
+
+/*************************************************************/
+		var my_div = document.getElementById("div1");
+		alert(my_div.title);
+		var new_div = document.createElement("div"); //创建子节点
+		var new_div_text = document.createTextNode("See you!"); //创建文本节点并赋值
+		new_div.appendChild(new_div_text); //把文本节点添加到new_div
+		new_div.title = "Luckly";  //给new_div赋title属性
+		alert(new_div.title);
+		my_div.appendChild(new_div); //把子节点new_div添加到你节点my_div
 	</script>
 </html>
