@@ -2,9 +2,30 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>菜鸟教程(runoob.com)</title>
 		<script src="js/prjs4_2.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
+		<!--<fieldset>
+			<legend>Chose a dinosaur:</legend>
+			<input type="radio" name="dino" id="dino_enigmo" value="Enigmosaurus" />
+			<label for="dino_enigmo">The mysterious type</label>
+			<input type="radio" name="dino" id="dino_spino" value="Spinosaurus" />
+			<label for="dino_spino">One with losts of backbone</label>
+		</fieldset>-->
+		<nav id="sitelinks">
+			<a href="page1.html">page1</a>
+			<a href="page2.html">page2</a>
+			<a href="page3.html">page3</a>
+		</nav>
+		<div>
+			Here is some content and check out <a href="someplace.come">my other site</a>!
+		</div>
 	</body>
+	<script type="text/javascript">
+//		var dino_radio = document.getElementsByName("dino");
+		var nav_element = document.getElementById("sitelinks");
+		var nav_links = nav_element.getElementsByTagName("a");
+		alert("There are " + nav_links.length + " links in the nav element.");
+	</script>
 </html>
