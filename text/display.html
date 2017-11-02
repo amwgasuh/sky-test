@@ -3,7 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>菜鸟教程(runoob.com)</title>
-		<script src="js/prjs4_2.js" type="text/javascript" charset="utf-8"></script>
+		<!--<style type="text/css">
+			#div1 {
+				color: #000000;
+				background: #FFFFFF;
+			}
+			#div2 {
+				border: solid 1px #000000;
+			}
+		</style>-->
 	</head>
 	<body>
 		<!--<fieldset>
@@ -33,9 +41,30 @@
 
 		<!--------------------------------------------------------->
 		
-		<div id="div1" title="Gosh!">
+		<!--<div id="div1" title="Gosh!">
 			Whatever I fell like I want to write...
+		</div>-->
+		
+		<!--------------------------------------------------------->
+		
+		<!--<div id="div1">
+			When will i update this page?
 		</div>
+		<div id="div2">
+			<a href="#" id="c_link">Find out!</a>
+		</div>-->
+
+		<!--------------------------------------------------------->
+		
+		<!--<form>
+			Phone Number;
+			<input type="text" id="pn"> <span id="reminder"></span><br /><br />
+			<textarea ></textarea>
+		</form>-->
+		
+		<!--------------------------------------------------------->
+		
+		<input type="button" id="mydiv" value="this is what!" />
 	</body>
 	<script type="text/javascript">
 //		var dino_radio = document.getElementsByName("dino");
@@ -55,13 +84,57 @@
 //
 
 /*************************************************************/
-		var my_div = document.getElementById("div1");
-		alert(my_div.title);
-		var new_div = document.createElement("div"); //创建子节点
-		var new_div_text = document.createTextNode("See you!"); //创建文本节点并赋值
-		new_div.appendChild(new_div_text); //把文本节点添加到new_div
-		new_div.title = "Luckly";  //给new_div赋title属性
-		alert(new_div.title);
-		my_div.appendChild(new_div); //把子节点new_div添加到你节点my_div
+
+//		var my_div = document.getElementById("div1");
+//		alert(my_div.title);
+//		var new_div = document.createElement("div"); //创建子节点
+//		var new_div_text = document.createTextNode("See you!"); //创建文本节点并赋值
+//		new_div.appendChild(new_div_text); //把文本节点添加到new_div
+//		new_div.title = "Luckly";  //给new_div赋title属性
+//		alert(new_div.title);
+//		my_div.appendChild(new_div); //把子节点new_div添加到你节点my_div
+
+		/*************************************************************/
+		
+//		var d1 = document.getElementById("div1");
+//		var d2 = document.getElementById("div2");
+//		d1.onclick = function() {
+//			d1.style.backgroundColor = "#ccc";
+//			<strong>Right now!</strong>
+//			Was thas quick or what?
+//			return false;
+//		};    更改css中的属性
+
+		/*************************************************************/
+
+//		var Focus = document.getElementById("focus");
+//		var Blur = document.getElementById("blur");
+//		Focus.onfocus = function() {
+//			window.alert("don't forget to capitalize!");
+//		}   //获取焦点
+//		Blur.onblur = function() {
+//			window.alert("get out");
+//		}  //失去焦点
+
+		/*************************************************************/
+		
+//		var pn = document.getElementById("pn");
+//		var rm = document.getElementById("reminder");
+//		pn.onfocus = function() {
+//			rm.innerText = "Format:123-456-7890";
+//		};
+//		pn.onblur = function() {
+//			rm.innerText = "";	
+//		};
+
+		/*************************************************************/
+		
+		var mydiv = document.getElementById("mydiv");
+		mydiv.onclick = function() {
+			alert("First click");
+		}
+		mydiv.onclick = function() {
+			alert("Second click");
+		}
 	</script>
 </html>
