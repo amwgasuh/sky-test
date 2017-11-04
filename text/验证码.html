@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: "微软雅黑";
+				-webkit-user-select: none; /*禁止用户选中*/
+			}
+			#look {
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				margin: 100px auto 0;
+				font-size: 32px;
+				text-align: center;
+				cursor: pointer;
+				background: -webkit-linear-gradient(top left, skyblue, pink, purple, yellowgreen);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="look"></div>
+		<script type="text/javascript">
+			var oDiv = document.getElementById("look");
+			var str = "abcdefghijklmnobqrstuvwxyz" + "abcdefghijklmnobqrstuvwxyz0123456789".toUpperCase();
+			function getLook() {
+				var strLook = "";
+//				while(strLook.length < 4) {
+//					var n = Math.round(Math.random()*(61-0)+0);
+//					if (strLook.indexOf(str[n]) === -1) {
+//						strLook += str[n];
+//					} else {
+//						continue;
+//					}
+//				}
+				for(var i = 0; i < 4; i++){
+					var n = Math.round(Math.random()*(61-0)+0);
+					strLook += str[n];
+				}
+				oDiv.innerHTML = strLook;
+			}//function中只是定义了还没执行
+			getLook();
+			oDiv.onclick = getLook;
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var oDiv = document.createElement("div");
+		console.log(oDiv);
+		//父级元素.appendChild(子元素);
+		document.body.appendChild(oDiv);
+		var oP = document.createElement("p");
+		oDiv.appendChild(oP);
+		var oSpan = document.createElement("span");
+//		oDiv.appendChild(oSpan);
+		//父级元素.insertBefore(添加的元素，原来的元素)
+		oDiv.insertBefore(oSpan, oP);
+		
+		//添加	获取		删除元素的属性
+		//setAttribute 可以将属性加在html结构标签上
+		//getAttribute 只能获取加在html结构标签上的属性
+		//removeAttribute 只能删除加在html结构标签上的属性
+		oDiv.dream = "what!";
+		oDiv.className = "class2";
+		oDiv.setAttribute("div","class1");
+		var a = oDiv.getAttribute("div");
+		console.log(a);
+		var b = oDiv.getAttribute("class");
+		console.log(b);
+		var c = oDiv.getAttribute("dream");
+		console.log(c);
+		oDiv.removeAttribute("div");
+		console.log(oDiv.dream);
+	</script>
+</html>

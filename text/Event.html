@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<button id="myBtn">点我</button>
+		<p id="demo"></p>-->
+		
+		<p>This is very <span id="Int">interesting</span> </p>
+	</body>
+	<script type="text/javascript">
+//		document.addEventListener("click", function() {
+//			document.getElementById("demo").innerHTML = "Hello World!";  添加点击事件
+//		});
+
+		/***********************************************/
+		
+//		document.addEventListener("mouseover", myfunction);
+//		function myfunction() {
+//			document.getElementById("demo").innerHTML = Math.random();
+//		}
+//		function removeHandler() {
+//			document.removeEventListener("mousemove", myfunction);
+//		}
+
+		/***********************************************/
+		
+//		document.getElementById("myBtn").addEventListener("click", function() {
+//			document.getElementById("demo").innerHTML = "Hello World!";  //向按钮添加点击事件
+//		});
+		
+		/***********************************************/
+		
+//		var b1 = document.getElementById("myBtn");
+//		b1.onclick = function (event) {
+//			alert("The " + event.type + " event started this!");
+//		};
+
+		/***********************************************/
+		
+//		var b1 = document.getElementById("myBtn");
+//		b1.addEventListener("click", function(event) {
+//			alert("The " + event.type + " event started this!");
+//		});
+
+		/***********************************************/
+
+		var Int = document.getElementById("Int");
+		Int.addEventListener("mouseover", function() {
+			Int.style.color = "#FF0000";
+		}, false);
+		Int.addEventListener("mouseout", function() {
+			Int.style.color = "#000000";
+		}, false);
+		
+	</script>
+</html>

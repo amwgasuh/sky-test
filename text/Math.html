@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.dir(Math);
+			//abs 绝对值
+			console.log(Math.abs(-20));
+			//向上取整
+			console.log(Math.ceil(-1.6));
+			//向下取整
+			console.log(Math.floor(-1.5));
+			//四舍五入
+			console.log(Math.round(-1.6));
+			console.log(Math.round(-1.4));
+			//pow 乘方
+			console.log(Math.pow(2,4));
+			//sqrt 开方
+			console.log(Math.sqrt(9));
+			//[0,1)随机小数
+			console.log(Math.random());
+			//[m,n]随机数
+			console.log(Math.random()*(10-0)+0);
+			console.log(Math.round(Math.random()*(11-1)+1));
+			
+			
+			//html中所有的内容都是节点
+			//节点区分  看三个主要属性
+			//1.元素节点  （标签元素）
+			//nodeName:大写标签名	nodeType：1	 nodeValue：null
+			//2.文本节点  （标签里面的文本内容）
+			//nodeName:#text	nodeType：3	 nodeValue：text
+			//3.注释节点	 （注释的内容）
+			//nodeName:#comment	nodeType：8	 nodeValue：注释内容
+			//4.document
+			//nodeName:#document	nodeType：9	 nodeValue：null
+			
+			//substr(n,m)开始索引，结束索引;
+			//substring(n,m)开始索引，结束索引-1;
+			
+			var str = "This is what!";
+			var strbig = str.toUpperCase(); //转换成大写
+			console.log(strbig);
+			var strsmall = str.toLowerCase(); //转换成小写
+			console.log(strsmall);
+			//“1”.localeCompare("2")前面比后面小为-1，前面比后面大为1
+			var n = "khat".localeCompare("Johnny");
+			console.log(n);
+			console.log(str.charCodeAt(2));
+			//通过索引获取指定搁置字符对应的UNICODE编码值（ASCII码表）
+			console.log(str.charAt(1));
+			//通过索引获取指定字符
+		</script>
+	</body>
+</html>

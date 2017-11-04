@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<span id="num">0</span>
+		<p><input type="button" value="点我停止" onclick="qingchu()" /></p>
+		<script type="text/javascript">
+			var i = 0;
+			function jia() {
+				i++;
+				document.getElementById("num").innerHTML = i;
+			}
+			var mySet = setInterval(function(){
+				jia();
+			},1000);
+			function qingchu() {
+				clearInterval(mySet);
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script type="text/javascript">
+		var c = 0, t;
+		function timedcount() {
+			document.getElementById("txt").value = c;
+			c += 1;
+			t = setTimeout(function() {
+				timedcount();
+			},1000);
+		}
+		timedcount();
+	</script>
+</head>
+<body>
+	<input type="text" id="txt" />
+	<input type="button" value="开始计时" onclick="timedcount()" />
+</body>
+</html>-->
