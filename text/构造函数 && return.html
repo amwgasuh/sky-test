@@ -1,0 +1,56 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" onclick="my('are you kidding me?')" value="在早上" />
+		<input type="button" onclick="my('我看你是在搞笑')" value="在晚上" />
+		<script type="text/javascript">
+			function  my(txt) {
+				alert(txt);
+			}
+		</script>
+	</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		function myfunction(a,b) {
+			return a*b;
+		}
+	</script>
+	<script type="text/javascript">
+		document.getElementById("demo").innerHTML = myfunction(4,6);
+	</script>
+</body>
+</html><-->
+	<!DOCTYPE html>
+	<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button type="button" onclick="myfunction()">计数</button>
+		<p id="demo">0</p>
+		<script type="text/javascript">
+		var add = (function () {
+			var counter = 0;
+			return function () {return counter +=1;}
+			})();
+		function myfunction() {
+				document.getElementById("demo").innerHTML = add();
+			}
+		//闭包就是在子函数中调用父函数的变量和参数
+		</script>
+	</body>
+	</html>
+</-->
