@@ -1,0 +1,46 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="txt" onchange="myfunction()"/>
+		<script type="text/javascript">
+			function myfunction() {
+				var x = document.getElementById("txt");
+				x.value = x.value.toUpperCase();
+			}
+		</script>
+	</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style type="text/css">
+		#demo {
+			background: red;
+			width: 150px;
+			height: 150px;
+			line-height: 150px;
+			text-align: center;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<p id="demo" onmousedown="color(this)" onmouseup="Color(this)">This is what!</p>
+	<script type="text/javascript">
+		function color(obj) {
+			obj.style.backgroundColor = "skyblue";
+			obj.innerHTML = "help me!"
+		}
+		function Color(obj) {
+			obj.style.backgroundColor = "red";
+			obj.innerHTML = "This is what!";
+		}
+	</script>
+</body>
+</html>

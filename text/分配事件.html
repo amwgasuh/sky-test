@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="demo">shoot me</button>
+		<script type="text/javascript">
+			document.getElementById("demo").onclick = function(){myfunction()};//点按钮执行myfunction()
+			function  myfunction() {
+				document.getElementById("myFun").innerHTML = Date();
+			}
+		</script>
+		<p id="myFun"></p>
+	</body>
+</html>
