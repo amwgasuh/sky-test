@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function change(clickObj) {
+				var tabObjs = document.getElementById("tabUl").children;
+				for (var i = 0; i < tabObjs.length; i++) {
+					if(tabObjs[i].className == "on") {
+						tabObjs.className = "";
+						var currContentId = tabObjs[i].getAttribute("contentObjId");
+						document.getElementById(currContentId).className = "nr yincang";
+					}
+				}
+				clickObj.className = "on";
+				var nowContentId = clickObj.getAttribute("contentObjId");
+				document.getElementById(nowContentId).className = "nr xianshi";
+			}
+		</script>
+		<style type="text/css">
+			.xxk {
+				width: 600px;
+				height: 400px;
+				border: 2px #000 solid;
+			}
+			.xxk_bt {
+				width: 600px;
+				height: 30px;
+				font-size: 16px;
+			}
+			.xxk_bt li {
+				float: left;
+				display: block;
+				line-height: 30px;
+				width: 100px;
+				height: 30px;
+				background: #09c;
+				margin-left: 5px;
+				cursor: pointer;
+			}
+			.xxk_bt .on {
+				background: #003;
+				color: #fff;
+			}
+			.nr {
+				text-align: left;
+				background: #000033;
+				color: #FFFFFF;
+				line-height: 24px;
+				height: 370px;
+			}
+			.xianshi {display: block;}
+			.yincang {display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="xxk" id="tab1">
+			<ul class="xxk_bt" id="tabUl">
+				<li onclick="change(this)" contentObjId="neirong1"><span>MENU1</span></li>
+				<li onclick="change(this)" contentObjId="neirong2"><span>MENU2</span></li>
+				<li onclick="change(this)" contentobjId="neirong3"><span>MENU3</span></li>	
+			</ul>
+			<div id="neirong1" class="nr xianshi">这里是内容1</div>
+			<div id="neirong2" class="nr yincang">这里是内容2</div>
+			<div id="neirong3" class="nr yincang">这里是内容3</div>
+		</div>
+	</body>
+</html>
