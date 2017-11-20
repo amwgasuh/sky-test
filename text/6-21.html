@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var ary = [12,25,36,53,28,11];
+			console.log(ary);
+			//1、push(n) 向原数组末尾增加新的内容
+			//原数组改变	返回值是改变后数组的长度	参数可以多个
+			var ary_1 = ary.push(8,2,4,5,6,78,0);
+			console.log(ary,ary_1);
+			//2、pop()删除数组最后一项
+			//原数组改变	返回值为被删除的一项 没有参数
+			var ary_2 = ary.pop();
+			console.log(ary,ary_2);
+			ary.length -= 1;
+//			console.log(ary);
+			//3、shift()删除数组的第一项
+			//没有参数 返回值为被删除的一项
+			var ary_3 = ary.shift();
+//			console.log(ary,ary_3);
+			//4、unshif(n)向数组的第一项增加新内容
+			//原数组改变	参数可以为多个 返回值为改变后的数组长度
+			var ary_4 = ary.unshift(12,12);
+			console.log(ary,ary_4);
+			//slice 当n>m时	索引n开始到m-1结束,n为空时直接克隆原数组，只有n时就从n查找到最后
+//					当n<m时	数组为空
+//					如果为负数就倒着查找	末尾位置索引为-1
+			//原数组不变 返回值是内容组成的新数组
+			var a = [1,2,3,4,5,6,7];
+			var b = a.slice(3,5);
+			console.log(ary,b);
+			//splice 从索引n开始找出m个，如果不够m个就直接把后面的全部取出
+			//原数组改变	返回值为找出新内容组成的数组，只有n时就从n查找到最后
+			var lice = [1,2,3,4,5,6,7];
+			var lice_1 = lice.splice(5,4);
+			console.log(lice_1);
+			//ary1.concat(ary2);将ary2拼到ary1上
+			//原数组不变 返回值拼接好的新数组,参数可以是多个数组
+			var ary1 = [1,2];
+			var ary2 = [3,4];
+			var ary3 = [5,6];
+			var newAry = ary1.concat(ary2,ary3);
+			console.log(ary1,ary2,newAry);
+		</script>
+	</body>
+</html>

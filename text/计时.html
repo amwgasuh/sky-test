@@ -56,6 +56,8 @@
 </body>
 <script type="text/javascript">
 	function showLocalTime() {
+			var mySet = null;
+			window.clearInterval(mySet);
 			var tm = 10;
 			var interval = setInterval(function() {
 				if (tm ==0 ) {
@@ -140,22 +142,48 @@
 </body>
 </html>-->
 	
-	<!--秒杀-->
+<!--秒杀-->
 <!DOCTYPE html>
 <html lang="zh">
 <head>
 	<meta charset="UTF-8" />
 	<title>Document</title>
+	<style type="text/css">
+		#time {
+			margin: 50px auto 0;
+			width: 500px;
+			height: 200px;
+			line-height: 200px;
+			text-align: center;
+			background: skyblue;
+		}
+	</style>
 </head>
 <body>
+	<div id="time"></div>
 	<script type="text/javascript">
-		var nowTime = new Date();
-		var targetTime = new Date(2017, 11-1, 6, 12, 05);
-		var diffTime = nowTime - targetTime;
-		console.log(diffTime);//结果是毫秒数
-		var Months = Math.floor((diffTime/1000)/(60*60*24));
-		console.log(Months);
-		var dates = Math.floor((diffTime/1000)/(60*60*24));
+		var oDiv = document.getElementById("time");
+		var targetTime = new Date(2017, 11-1, 7, 17, 57, 30); //定一个时间
+		function seckilling() {
+			var timer = null;
+			window.clearInterval(timer);
+			var nowTime = new Date();
+			var diffTime = targetTime - nowTime;
+			//console.log(diffTime);//结果是毫秒数
+			var Months = Math.floor((diffTime/1000)/(60*60*24*30));//floor向下取整
+			var day = Math.floor((diffTime/1000)/(60*60*24));
+			var hours = Math.floor((diffTime/1000)/(60*60));
+			var minuse = Math.floor((diffTime/1000)/(60));
+			var second = Math.floor((diffTime/1000));
+			var s = Months + "月" + day + "天" + hours + "小时" + minuse + "分钟" + second + "秒";
+			console.log(s)
+			oDiv.innerHTML = "距离另一个时间还有：" + s;
+			if(diffTime <= 1000) {
+				oDiv.innerHTML = "<a href='http://www.jingdong.com'>前往秒杀</a>"
+			}
+		}
+		seckilling();
+		timer = window.setInterval(seckilling,1000);
 	</script>
 </body>
 </html>
