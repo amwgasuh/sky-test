@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				list-style-type: none;
+			}
+			#box>p {
+				font-size: 20px;
+			}
+			#rect {
+				margin-top: 10px;
+				width: 100px;
+				height: 100px;
+				border: 5px solid black;
+			}
+			#set_button {
+				background: red;
+			}
+			#tac {
+				width: 100%;
+				height: 800px;
+				/*background: rgba(255,0,0,0.5);*/
+			}
+			#tac ul {
+				margin: 0 auto;
+				width: 300px;
+				height: 300px;
+				border: 10px solid #999999;
+			}
+			#tac p {
+				margin-left: 30px;
+			}
+			#tac .p1 {
+				margin-top: 20px;
+			}
+			#tac .p1 .color_1 {
+				background: lightpink;
+			}
+			#tac .p1 .color_2 {
+				background: greenyellow;
+			}
+			#tac .p1 .color_3 {
+				background: skyblue;
+			}
+			#tac p span{
+				width: 26px;
+				height: 26px;
+				line-height: 26px;
+				font-size: 6px;
+				border: 1px solid #999;
+				display: inline-block;
+				text-align: center;
+				cursor: pointer;
+			}
+		</style>
+		<script>
+			window.onload = function () {
+				var oRect_ = document.getElementById("rect");
+				var setBtn_ = document.getElementById("set_button");
+				var tac_ = document.getElementById("tac");
+				var oSpan = document.getElementsByTagName("");
+//					setBtn_ = tac_;
+//					setBtn_.style.display = "block";
+//				}
+//				color_R.onclick = function(){
+//					color(color_R, "red");
+//				}
+//				color_G.onclick = function(){
+//					color(color_G, "green");
+//				}
+//				color_B.onclick = function(){
+//					color(color_B, "blue");
+//				}
+//				function color(x, color_) {
+//					x.style.background = color_;
+//					oRect_.style.background = color_;
+//				}
+//				console.log(oSpan[0]);	
+				for(var i = 0; i < 3; i++) {
+					oSpan[i].index = i;
+					oSpan[i].onclick =  function() {
+					this.style.border = "none";
+						if (this.index == 0) {
+							this.style.background = "red";
+							oRect_.style.background = "red";
+						} else{
+							
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p>请为下面的DIV设置样式：<button id="set_button">点击设置</button></p>
+			<div id="rect"></div>
+			<div id="tac">
+				<ul>
+					<p class="p1">请输入背景颜色：
+						<span class="color_1">红</span>
+						<span class="color_2">绿</span>
+						<span class="color_3">蓝</span>
+					</p>
+					<p class="p2">请选择宽度(px)：
+						<span>400</span>
+						<span>300</span>
+						<span>200</span>
+					</p>
+					<p class="p3">请选择高度(px)：
+						<span>400</span>
+						<span>300</span>
+						<span>200</span>
+					</p>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
