@@ -159,3 +159,26 @@ border: 1px solid #f8d0bf; border-radius: 5px 5px 0 0; border-bottom: none; text
 .section .tab li { width: 98px;}
 .side_section .tab { padding: 0 6px;}
 .side_section .tab li { width: 66px;}
+
+
+.list_section {}
+.list_section li { height: 27px; line-height: 27px; border-top: 1px solid #dadada; background: url(../img/dot.gif) no-repeat 5px center; vertical-align: middle;}
+.list_section li a { display: block; color: #333333; text-indent: 14px;}
+.list_section li a:hover { text-decoration: underline;}
+.list_section li a em { color: #C3C3C3;}
+.list_section li a span { color: #c75d61;}
+.list_section .col1, .list_section .col2, .list_section .col3 {float: left;}
+.list_section .col2, .list_section .col3 { text-align: center;} 
+
+.list_section .title { background: none; color: #999999;}
+.list_section .title .col1 { text-align: center;}
+.list_section .color {color: #d80000;}
+
+.side_section .col1 { width: 137px;}
+.side_section .col2 { width: 35px;}
+.side_section .col3 { width: 36px;}
+
+.section .col1 { width: 273px;}
+.section .col2 { width: 35px;}
+.section .col2 img { position: relative; top: 7px;}
+.list_section .title {border-top: none;}
